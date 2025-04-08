@@ -1,6 +1,5 @@
 import React from 'react';
 import SidebarNavigation from './SidebarNavigation';
-import { Session } from 'next-auth';
 import Logout from './Logout';
 
 const Sidebar = () => {
