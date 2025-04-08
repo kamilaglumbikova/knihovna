@@ -1,3 +1,4 @@
+// @typescript-eslint/no-empty-object-type
 "use client";
 
 import React from 'react'
@@ -15,11 +16,9 @@ import {
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button';
 import { useRouter } from "next/navigation";
-import { bookSchema, signInSchema } from '@/lib/validations'
+import { bookSchema } from '@/lib/validations'
 import { toast } from '@/hooks/use-toast';
 import { createBook } from '@/lib/admin/actions/book';
-
-interface Props { }
 
 const BookForm = () => {
   const router = useRouter();

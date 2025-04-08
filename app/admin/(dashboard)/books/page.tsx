@@ -7,7 +7,6 @@ import React from 'react'
 import { desc } from "drizzle-orm";
 import { getAllBooks } from '@/lib/admin/actions/book'
 
-interface Props { }
 
 const Page = async () => {
     const booksAll = await getAllBooks() as Book[];

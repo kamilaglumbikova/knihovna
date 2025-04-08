@@ -20,7 +20,6 @@ import { toast } from '@/hooks/use-toast';
 import { useRouter } from "next/navigation";
 import Link from 'next/link';
 
-interface Props { }
 
 const Page = () => {
   const router = useRouter();

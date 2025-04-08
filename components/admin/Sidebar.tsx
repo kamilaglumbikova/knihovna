@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import SidebarNavigation from './SidebarNavigation';
 import { Session } from 'next-auth';
 import Logout from './Logout';
 
-const Sidebar = ({ session }: { session: Session }) => {
+const Sidebar = () => {
     return (
         <div className='admin-sidebar'>
             <div>

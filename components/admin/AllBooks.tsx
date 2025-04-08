@@ -1,8 +1,7 @@
+// @typescript-eslint/no-empty-object-type
 import { columns } from '@/app/admin/(dashboard)/books/columns'
 import { DataTable } from '@/app/admin/(dashboard)/books/data-table'
 import React from 'react'
-
-interface Props { }
 
 const AllBooks = ({ books,pagination }: { books: Book[], pagination?: boolean }) => {
     

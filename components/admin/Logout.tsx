@@ -6,7 +6,7 @@ export default function Logout() {
     <div>
       <form
         className="mb-10"
-        action={async (formData) => {
+        action={async () => {
           "use server"
           await signOut()
         }}

@@ -1,7 +1,6 @@
+// @typescript-eslint/no-empty-object-type
 import { Session } from 'next-auth';
 import React from 'react'
-
-interface Props { }
 
 const Header = ({ session }: { session: Session }) => {
   return (

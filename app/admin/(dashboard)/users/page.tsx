@@ -1,14 +1,10 @@
-import AllBooks from '@/components/admin/AllBooks'
-import { Button } from '@/components/ui/button'
 import { db } from '@/database/drizzle'
 import { users } from '@/database/schema'
-import Link from 'next/link'
 import React from 'react'
 import { desc } from "drizzle-orm";
 import { columns } from './columns'
 import { DataTable } from './data-table'
 
-interface Props { }
 
 const Page = async () => {
     const usersAll = await db.select().from(users).orderBy(desc(users.id)) as User[];

@@ -12,7 +12,7 @@ const Layout = async ({ children }: { children: ReactNode }) => {
     if(!session?.user?.id) redirect('/admin/sign-in');
     return (
         <main className='flex min-h-screen w-full flex-row'>
-            <Sidebar session={session} />
+            <Sidebar />
 
             <div className='admin-container'>
                 <Header session={session} />
