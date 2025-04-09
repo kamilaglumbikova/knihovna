@@ -61,7 +61,7 @@ export async function getDeleteBook(id: string) {
 
     return {
       success: true,
-      data: JSON.parse(JSON.stringify(deletedBook[0])),
+      data: JSON.parse(JSON.stringify(deletedBook[0])), 
     };
   } catch (error) {
     console.log(error);
