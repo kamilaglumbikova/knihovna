@@ -8,11 +8,8 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { getDeleteBook } from "@/lib/admin/actions/book"
 import { RowActionDelete } from "@/components/admin/RowActionDelete"
 
 export const columns: ColumnDef<Book>[] = [
