@@ -22,7 +22,7 @@ export function RowActionDelete({ row }: { row: any; }) {
 
             <Dialog open={open} onOpenChange={setOpen}>
                 <DialogContent onClick={(e) => e.stopPropagation()}>
-                    <DialogTitle>Opravdu chcete smazat "{item.title}"?</DialogTitle>
+                    <DialogTitle>{`Opravdu chcete smazat ${item.title}?`}</DialogTitle>
                     <DialogFooter>
                         <Button variant="outline" onClick={() => setOpen(false)}>
                             Zrušit
