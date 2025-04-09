@@ -5,8 +5,9 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogFooter, DialogTitle } from '@/components/ui/dialog';
 import { getDeleteBook } from '@/lib/admin/actions/book';
+import { Row } from "@tanstack/react-table";
 
-export function RowActionDelete({ row }: { row: any; }) {
+export function RowActionDelete({ row }: { row: Row<Book>; }) {
     const [open, setOpen] = useState(false);
     const item = row.original;
 
