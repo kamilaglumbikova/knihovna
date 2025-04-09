@@ -3,6 +3,7 @@
 import { db } from "@/database/drizzle";
 import { books } from "@/database/schema";
 import { desc, sql } from "drizzle-orm";
+import { eq } from 'drizzle-orm';
 
 export const createBook = async (params: BookParams) => {
   try {
@@ -49,4 +50,24 @@ export async function geBooksCount() {
   const count = result[0]?.count ?? 0;
 
   return count;
+}
+
+export async function getDeleteBook(id: string) {
+  try {
+    const deletedBook = await db
+      .delete(books)
+      .where(eq(books.id, id))
+      .returning();
+
+    return {
+      success: true,
+      data: JSON.parse(JSON.stringify(deletedBook[0])),
+    };
+  } catch (error) {
+    console.log(error);
+    return {
+      success: false,
+      message: "An error occurred while deleting the book",
+    };
+  }
 }
