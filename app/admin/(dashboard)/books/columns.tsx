@@ -28,7 +28,6 @@ export const columns: ColumnDef<Book>[] = [
   {
     id: "actions",
     cell: ({ row }) => {
-      const book = row.original
  
       return (
         <DropdownMenu>

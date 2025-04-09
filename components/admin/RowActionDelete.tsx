@@ -1,3 +1,4 @@
+// @typescript-eslint/no-explicit-any
 'use client';
 
 import { useState } from 'react';
@@ -17,12 +18,7 @@ export function RowActionDelete({ row }: { row: any; }) {
 
     return (
         <>
-            <Button variant="ghost" onClick={(e) => {
-                e.stopPropagation(); // zabrání bublině kliknutí
-                setOpen(true);
-            }}>
-                Smazat
-            </Button>
+            <Button variant="ghost" onClick={(e) => {e.stopPropagation();setOpen(true);}}>Smazat</Button>
 
             <Dialog open={open} onOpenChange={setOpen}>
                 <DialogContent onClick={(e) => e.stopPropagation()}>
